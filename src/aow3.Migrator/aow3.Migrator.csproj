@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>aow3.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>aow3.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="7.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aow3.Core\aow3.Core.csproj" />
+    <ProjectReference Include="..\aow3.EntityFrameworkCore\aow3.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
